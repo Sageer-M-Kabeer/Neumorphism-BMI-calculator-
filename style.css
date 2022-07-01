@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+html,body{
+    height: 100%;
+}
+body{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #dde1e7;
+}
+
+.calculator-container{
+    width: 330px;
+    background: #dde1e7;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: -3px -3px 7px #ffffff73,
+    2px 2px 5px rgba(94,104,121,0.288);
+}
+
+.calculator-container .head-img{
+    width: 80px;
+    height: 80px;
+    margin-top: -100px;
+    border-radius: 50px;
+    box-shadow: 
+    0px 0px 2px #383838,
+    0px 0px 5px #cbccce,
+    8px 8px 15px #a7aaaf,
+    -8px -8px 15px #ffffff
+    ;
+}
+.calculator-container .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #000;
+}
+
+.calculator-container .field{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+}
+.field input{
+    height: 100%;
+    /* width: 100%; */
+    padding-left: 45px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    color: #595959;
+    background:#dde1e7;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #babecc,
+                inset -5px -5px 10px #ffffff73;
+}
+
+.field input:focus ~ label{
+    box-shadow: inset 2px 2px 5px #babecc,
+                inset -1px -1px 2px #ffffff73;
+}
+
+.field input ::placeholder {
+    color: #595959;
+    opacity: 1;
+}
+
+.field:nth-child(2){
+    margin-top: 20px
+}
+
+.field span{
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color: #595959;
+}
+
+.calculate{
+    position: relative;
+    margin: 25px 0 0 0;
+    width: 100%;
+    height: 40px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    background: #dde1e7;
+transition: all 100ms cubic-bezier(0.175,0.885,0.32,1.275);
+box-shadow: 0px -6px 10px white,
+0px 4px 15px rgba(0,0,0,0.15);
+}
+.calculate:focus{
+    color: #3498db;
+    box-shadow: inset 0px -2px 5px white,
+    inset 0px 2px 5px rgba(0,0,0,0.15);
+}
+.calculate::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: 2;
+}
+.calculate:active{
+    box-shadow:  0 15px 20px rgba(0,0,0,0.02);
+}
+.calculate:active::after{
+    box-shadow: inset 0px -2px 5px white,
+    inset 0px 2px 5px rgba(0,0,0,0.15);
+}
+.calculator-container .result-container{
+    width: 100%;
+    height: 100%;
+    background: #dde1e7;
+    border-radius: 10px;
+    padding: 25px 30px 5px 15px;
+    margin-top: 20px;
+    box-shadow: -3px -3px 7px #ffffff73,
+    2px 2px 5px rgba(94,104,121,0.288);
+    transition: 0.5;
+}
+.calculator-container .result-container .result{
+    font-size: 15px;
+    font-weight: 600;
+}
+.calculator-container .result-container .result-statement{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #000;
+}
+
+.footer-container{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.footer_text{
+    font-size: 12px;
+    color: #666666;
+}
+
+.calculator-container .contact{
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.contact-btn-container{
+    width: 280px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact-btn-container .btn{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #dde1e7;
+    transition: all 100ms cubic-bezier(0.175,0.885,0.32,1.275);
+    box-shadow: 0px -6px 10px white,
+    0px 4px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+    border: none;
+}
+.contact-btn-container .btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.contact-btn-container .btn:active{
+    box-shadow:  0 15px 20px rgba(0,0,0,0.02);
+}
+.contact-btn-container .btn:active::after{
+    box-shadow: inset 0px -2px 5px white,
+    inset 0px 2px 5px rgba(0,0,0,0.15);
+}
+.contact-btn-container .btn .icon-container,
+.contact-btn-container .btn a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contact-btn-container .btn a{
+    z-index: 10;
+}
+.contact-btn-container .icon-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    fill: #868686;
+    width: 1rem;
+    transition: all 100ms cubic-bezier(0.175,0.885,0.32,1.275);;
+}
